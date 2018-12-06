@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "PagingViewController.h"
-#import <Masonry.h>
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 

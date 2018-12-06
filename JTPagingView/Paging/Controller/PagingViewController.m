@@ -8,15 +8,12 @@
 
 #import "PagingViewController.h"
 #import "PagingView.h"
-#import <Masonry.h>
 
 @interface PagingViewController ()
 
 @property (nonatomic, strong) PagingView *paging;
 
 @end
-
-#define RANDOM_COLOR [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0]
 
 @implementation PagingViewController
 
