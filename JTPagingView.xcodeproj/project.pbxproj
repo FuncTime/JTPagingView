@@ -158,8 +158,7 @@
 				77D4AF5121B8F359002578FD /* ViewController.m */,
 				77D4AF6B21B8F38B002578FD /* BaseViewController.h */,
 				77D4AF6C21B8F38C002578FD /* BaseViewController.m */,
-				77D4AF5621B8F365002578FD /* PagingViewController.h */,
-				77D4AF5521B8F365002578FD /* PagingViewController.m */,
+				77D4AF7021B90FC6002578FD /* Paging */,
 				77D4AF2121B8F2B6002578FD /* Main.storyboard */,
 				77D4AF2421B8F2B7002578FD /* Assets.xcassets */,
 				77D4AF2621B8F2B7002578FD /* LaunchScreen.storyboard */,
@@ -203,6 +202,39 @@
 				77D4AF6221B8F365002578FD /* UIView+Extension.m */,
 			);
 			path = JTPagingView;
+			sourceTree = "<group>";
+		};
+		77D4AF7021B90FC6002578FD /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AF7221B90FD9002578FD /* Controller */,
+				77D4AF7121B90FD9002578FD /* Model */,
+				77D4AF7321B90FD9002578FD /* View */,
+			);
+			path = Paging;
+			sourceTree = "<group>";
+		};
+		77D4AF7121B90FD9002578FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77D4AF7221B90FD9002578FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AF5621B8F365002578FD /* PagingViewController.h */,
+				77D4AF5521B8F365002578FD /* PagingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77D4AF7321B90FD9002578FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CE68C8945F34E870080F33DF /* Pods */ = {
