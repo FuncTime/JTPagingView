@@ -151,6 +151,7 @@
 		77D4AF1A21B8F2B6002578FD /* JTPagingView */ = {
 			isa = PBXGroup;
 			children = (
+				77D4AF6E21B902DB002578FD /* JTPagingView */,
 				77D4AF5321B8F365002578FD /* Paging */,
 				77D4AF1B21B8F2B6002578FD /* AppDelegate.h */,
 				77D4AF1C21B8F2B6002578FD /* AppDelegate.m */,
@@ -214,19 +215,26 @@
 		77D4AF5821B8F365002578FD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				77D4AF5921B8F365002578FD /* PagingBottomView.h */,
-				77D4AF5A21B8F365002578FD /* UIView+Extension.h */,
-				77D4AF5B21B8F365002578FD /* PagingTopView.h */,
-				77D4AF5C21B8F365002578FD /* PagingTopButtonView.h */,
-				77D4AF5D21B8F365002578FD /* PagingView.h */,
-				77D4AF5E21B8F365002578FD /* PagingTopButtonView.xib */,
-				77D4AF5F21B8F365002578FD /* PagingBottomView.m */,
-				77D4AF6021B8F365002578FD /* PagingTopButtonView.m */,
-				77D4AF6121B8F365002578FD /* PagingTopView.m */,
-				77D4AF6221B8F365002578FD /* UIView+Extension.m */,
-				77D4AF6321B8F365002578FD /* PagingView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		77D4AF6E21B902DB002578FD /* JTPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AF5D21B8F365002578FD /* PagingView.h */,
+				77D4AF6321B8F365002578FD /* PagingView.m */,
+				77D4AF6121B8F365002578FD /* PagingTopView.m */,
+				77D4AF5B21B8F365002578FD /* PagingTopView.h */,
+				77D4AF5C21B8F365002578FD /* PagingTopButtonView.h */,
+				77D4AF6021B8F365002578FD /* PagingTopButtonView.m */,
+				77D4AF5E21B8F365002578FD /* PagingTopButtonView.xib */,
+				77D4AF5921B8F365002578FD /* PagingBottomView.h */,
+				77D4AF5F21B8F365002578FD /* PagingBottomView.m */,
+				77D4AF5A21B8F365002578FD /* UIView+Extension.h */,
+				77D4AF6221B8F365002578FD /* UIView+Extension.m */,
+			);
+			path = JTPagingView;
 			sourceTree = "<group>";
 		};
 		CE68C8945F34E870080F33DF /* Pods */ = {
