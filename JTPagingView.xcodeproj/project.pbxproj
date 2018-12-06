@@ -222,10 +222,18 @@
 		77D4AF6E21B902DB002578FD /* JTPagingView */ = {
 			isa = PBXGroup;
 			children = (
+				77D4AF6F21B90454002578FD /* JTPagingView */,
+			);
+			path = JTPagingView;
+			sourceTree = "<group>";
+		};
+		77D4AF6F21B90454002578FD /* JTPagingView */ = {
+			isa = PBXGroup;
+			children = (
 				77D4AF5D21B8F365002578FD /* PagingView.h */,
 				77D4AF6321B8F365002578FD /* PagingView.m */,
-				77D4AF6121B8F365002578FD /* PagingTopView.m */,
 				77D4AF5B21B8F365002578FD /* PagingTopView.h */,
+				77D4AF6121B8F365002578FD /* PagingTopView.m */,
 				77D4AF5C21B8F365002578FD /* PagingTopButtonView.h */,
 				77D4AF6021B8F365002578FD /* PagingTopButtonView.m */,
 				77D4AF5E21B8F365002578FD /* PagingTopButtonView.xib */,
