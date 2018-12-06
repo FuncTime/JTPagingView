@@ -80,6 +80,7 @@
 		77D4AF6321B8F365002578FD /* PagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingView.m; sourceTree = "<group>"; };
 		77D4AF6B21B8F38B002578FD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		77D4AF6C21B8F38C002578FD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		77D4AF7621B92984002578FD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7AF43D808F60C8B8157F7117 /* libPods-JTPagingViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JTPagingViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81902D73D2C3A9ACF4F3A72D /* Pods-JTPagingView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTPagingView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTPagingView/Pods-JTPagingView.debug.xcconfig"; sourceTree = "<group>"; };
 		8BCB42985DECF83332D80B5D /* libPods-JTPagingView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JTPagingView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +152,7 @@
 		77D4AF1A21B8F2B6002578FD /* JTPagingView */ = {
 			isa = PBXGroup;
 			children = (
+				77D4AF7521B92984002578FD /* Configuration */,
 				77D4AF6E21B902DB002578FD /* JTPagingView */,
 				77D4AF1B21B8F2B6002578FD /* AppDelegate.h */,
 				77D4AF1C21B8F2B6002578FD /* AppDelegate.m */,
@@ -235,6 +237,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		77D4AF7521B92984002578FD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AF7621B92984002578FD /* PrefixHeader.pch */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		CE68C8945F34E870080F33DF /* Pods */ = {
@@ -621,6 +631,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JTPagingView/Configuration/PrefixHeader.pch";
 				INFOPLIST_FILE = JTPagingView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -639,6 +651,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JTPagingView/Configuration/PrefixHeader.pch";
 				INFOPLIST_FILE = JTPagingView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

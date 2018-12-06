@@ -9,7 +9,6 @@
 #import "PagingView.h"
 #import "PagingTopView.h"
 #import "PagingBottomView.h"
-#import <Masonry.h>
 
 @interface PagingView ()
 
@@ -18,8 +17,6 @@
 @property (nonatomic, strong) PagingBottomView *pagingBottom;
 
 @end
-
-#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 @implementation PagingView
 

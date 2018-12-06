@@ -7,7 +7,6 @@
 //
 
 #import "PagingBottomView.h"
-#import <Masonry.h>
 
 @interface PagingBottomView ()<UIScrollViewDelegate>
 
@@ -20,8 +19,6 @@
 @property (nonatomic, strong) NSMutableArray<UIView *> *views;
 
 @end
-
-#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 @implementation PagingBottomView
 

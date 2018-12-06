@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  myWheel
+//
+//  Created by xujiangtao on 2018/12/3.
+//  Copyright © 2018年 xujiangtao. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Masonry.h>
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define RANDOM_COLOR [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0]
+#define BOTTOM_LINE_COLOR [UIColor colorWithRed:255/255.0 green:0/255.0 blue:0/255.0 alpha:1.0]
+#endif /* PrefixHeader_pch */

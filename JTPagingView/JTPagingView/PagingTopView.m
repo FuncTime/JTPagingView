@@ -9,7 +9,6 @@
 #import "PagingTopView.h"
 #import "PagingTopButtonView.h"
 #import "UIView+Extension.h"
-#import <Masonry.h>
 
 @interface PagingTopView ()<UIScrollViewDelegate>
 
@@ -28,9 +27,6 @@
 @property (nonatomic, assign) float lastScrollX;
 
 @end
-
-#define BOTTOM_LINE_COLOR [UIColor colorWithRed:255/255.0 green:0/255.0 blue:0/255.0 alpha:1.0]
-#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 @implementation PagingTopView
 
