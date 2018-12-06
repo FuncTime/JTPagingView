@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3F6C15D89E2FA032C120A3 /* libPods-JTPagingViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF43D808F60C8B8157F7117 /* libPods-JTPagingViewTests.a */; };
 		77D4AF1D21B8F2B6002578FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF1C21B8F2B6002578FD /* AppDelegate.m */; };
-		77D4AF2021B8F2B6002578FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF1F21B8F2B6002578FD /* ViewController.m */; };
 		77D4AF2321B8F2B6002578FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AF2121B8F2B6002578FD /* Main.storyboard */; };
 		77D4AF2521B8F2B7002578FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AF2421B8F2B7002578FD /* Assets.xcassets */; };
 		77D4AF2821B8F2B7002578FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AF2621B8F2B7002578FD /* LaunchScreen.storyboard */; };
 		77D4AF2B21B8F2B7002578FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF2A21B8F2B7002578FD /* main.m */; };
 		77D4AF3521B8F2B7002578FD /* JTPagingViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF3421B8F2B7002578FD /* JTPagingViewTests.m */; };
 		77D4AF4021B8F2B7002578FD /* JTPagingViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF3F21B8F2B7002578FD /* JTPagingViewUITests.m */; };
+		77D4AF5221B8F359002578FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF5121B8F359002578FD /* ViewController.m */; };
+		77D4AF6421B8F365002578FD /* PagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF5521B8F365002578FD /* PagingViewController.m */; };
+		77D4AF6521B8F365002578FD /* PagingTopButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AF5E21B8F365002578FD /* PagingTopButtonView.xib */; };
+		77D4AF6621B8F365002578FD /* PagingBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF5F21B8F365002578FD /* PagingBottomView.m */; };
+		77D4AF6721B8F365002578FD /* PagingTopButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6021B8F365002578FD /* PagingTopButtonView.m */; };
+		77D4AF6821B8F365002578FD /* PagingTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6121B8F365002578FD /* PagingTopView.m */; };
+		77D4AF6921B8F365002578FD /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6221B8F365002578FD /* UIView+Extension.m */; };
+		77D4AF6A21B8F365002578FD /* PagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6321B8F365002578FD /* PagingView.m */; };
+		77D4AF6D21B8F38C002578FD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6C21B8F38C002578FD /* BaseViewController.m */; };
+		7BDA478402230DDE5D712D94 /* libPods-JTPagingView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BCB42985DECF83332D80B5D /* libPods-JTPagingView.a */; };
+		CB6DB50BBB8A548CB7DE3F5A /* libPods-JTPagingViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DE73CB5C661826D0CC16FB /* libPods-JTPagingViewUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B02DCD67D55AB1F19E1991E /* Pods-JTPagingViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTPagingViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTPagingViewUITests/Pods-JTPagingViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		63DE73CB5C661826D0CC16FB /* libPods-JTPagingViewUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JTPagingViewUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6900902FF0B6F5102DCB241F /* Pods-JTPagingViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTPagingViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTPagingViewTests/Pods-JTPagingViewTests.release.xcconfig"; sourceTree = "<group>"; };
 		77D4AF1821B8F2B6002578FD /* JTPagingView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTPagingView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D4AF1B21B8F2B6002578FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77D4AF1C21B8F2B6002578FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		77D4AF1E21B8F2B6002578FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		77D4AF1F21B8F2B6002578FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		77D4AF2221B8F2B6002578FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77D4AF2421B8F2B7002578FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77D4AF2721B8F2B7002578FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +63,29 @@
 		77D4AF3B21B8F2B7002578FD /* JTPagingViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JTPagingViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D4AF3F21B8F2B7002578FD /* JTPagingViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTPagingViewUITests.m; sourceTree = "<group>"; };
 		77D4AF4121B8F2B7002578FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77D4AF5021B8F359002578FD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		77D4AF5121B8F359002578FD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		77D4AF5521B8F365002578FD /* PagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingViewController.m; sourceTree = "<group>"; };
+		77D4AF5621B8F365002578FD /* PagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingViewController.h; sourceTree = "<group>"; };
+		77D4AF5921B8F365002578FD /* PagingBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingBottomView.h; sourceTree = "<group>"; };
+		77D4AF5A21B8F365002578FD /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		77D4AF5B21B8F365002578FD /* PagingTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingTopView.h; sourceTree = "<group>"; };
+		77D4AF5C21B8F365002578FD /* PagingTopButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingTopButtonView.h; sourceTree = "<group>"; };
+		77D4AF5D21B8F365002578FD /* PagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingView.h; sourceTree = "<group>"; };
+		77D4AF5E21B8F365002578FD /* PagingTopButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagingTopButtonView.xib; sourceTree = "<group>"; };
+		77D4AF5F21B8F365002578FD /* PagingBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingBottomView.m; sourceTree = "<group>"; };
+		77D4AF6021B8F365002578FD /* PagingTopButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingTopButtonView.m; sourceTree = "<group>"; };
+		77D4AF6121B8F365002578FD /* PagingTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingTopView.m; sourceTree = "<group>"; };
+		77D4AF6221B8F365002578FD /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		77D4AF6321B8F365002578FD /* PagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingView.m; sourceTree = "<group>"; };
+		77D4AF6B21B8F38B002578FD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		77D4AF6C21B8F38C002578FD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		7AF43D808F60C8B8157F7117 /* libPods-JTPagingViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JTPagingViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81902D73D2C3A9ACF4F3A72D /* Pods-JTPagingView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTPagingView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTPagingView/Pods-JTPagingView.debug.xcconfig"; sourceTree = "<group>"; };
+		8BCB42985DECF83332D80B5D /* libPods-JTPagingView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JTPagingView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E3A77307BF69157E2B46F6 /* Pods-JTPagingViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTPagingViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTPagingViewTests/Pods-JTPagingViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFA0BE1B35164956B3D1282B /* Pods-JTPagingView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTPagingView.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTPagingView/Pods-JTPagingView.release.xcconfig"; sourceTree = "<group>"; };
+		FEB1B5AB55F5577EAA31661F /* Pods-JTPagingViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTPagingViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTPagingViewUITests/Pods-JTPagingViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BDA478402230DDE5D712D94 /* libPods-JTPagingView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3F6C15D89E2FA032C120A3 /* libPods-JTPagingViewTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +109,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6DB50BBB8A548CB7DE3F5A /* libPods-JTPagingViewUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A0ACB067A8229B072EA42E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BCB42985DECF83332D80B5D /* libPods-JTPagingView.a */,
+				7AF43D808F60C8B8157F7117 /* libPods-JTPagingViewTests.a */,
+				63DE73CB5C661826D0CC16FB /* libPods-JTPagingViewUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		77D4AF0F21B8F2B6002578FD = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +133,8 @@
 				77D4AF3321B8F2B7002578FD /* JTPagingViewTests */,
 				77D4AF3E21B8F2B7002578FD /* JTPagingViewUITests */,
 				77D4AF1921B8F2B6002578FD /* Products */,
+				CE68C8945F34E870080F33DF /* Pods */,
+				3A0ACB067A8229B072EA42E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +151,13 @@
 		77D4AF1A21B8F2B6002578FD /* JTPagingView */ = {
 			isa = PBXGroup;
 			children = (
+				77D4AF5321B8F365002578FD /* Paging */,
 				77D4AF1B21B8F2B6002578FD /* AppDelegate.h */,
 				77D4AF1C21B8F2B6002578FD /* AppDelegate.m */,
-				77D4AF1E21B8F2B6002578FD /* ViewController.h */,
-				77D4AF1F21B8F2B6002578FD /* ViewController.m */,
+				77D4AF5021B8F359002578FD /* ViewController.h */,
+				77D4AF5121B8F359002578FD /* ViewController.m */,
+				77D4AF6B21B8F38B002578FD /* BaseViewController.h */,
+				77D4AF6C21B8F38C002578FD /* BaseViewController.m */,
 				77D4AF2121B8F2B6002578FD /* Main.storyboard */,
 				77D4AF2421B8F2B7002578FD /* Assets.xcassets */,
 				77D4AF2621B8F2B7002578FD /* LaunchScreen.storyboard */,
@@ -132,6 +185,63 @@
 			path = JTPagingViewUITests;
 			sourceTree = "<group>";
 		};
+		77D4AF5321B8F365002578FD /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AF5421B8F365002578FD /* Controller */,
+				77D4AF5721B8F365002578FD /* Model */,
+				77D4AF5821B8F365002578FD /* View */,
+			);
+			path = Paging;
+			sourceTree = "<group>";
+		};
+		77D4AF5421B8F365002578FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AF5521B8F365002578FD /* PagingViewController.m */,
+				77D4AF5621B8F365002578FD /* PagingViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77D4AF5721B8F365002578FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77D4AF5821B8F365002578FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AF5921B8F365002578FD /* PagingBottomView.h */,
+				77D4AF5A21B8F365002578FD /* UIView+Extension.h */,
+				77D4AF5B21B8F365002578FD /* PagingTopView.h */,
+				77D4AF5C21B8F365002578FD /* PagingTopButtonView.h */,
+				77D4AF5D21B8F365002578FD /* PagingView.h */,
+				77D4AF5E21B8F365002578FD /* PagingTopButtonView.xib */,
+				77D4AF5F21B8F365002578FD /* PagingBottomView.m */,
+				77D4AF6021B8F365002578FD /* PagingTopButtonView.m */,
+				77D4AF6121B8F365002578FD /* PagingTopView.m */,
+				77D4AF6221B8F365002578FD /* UIView+Extension.m */,
+				77D4AF6321B8F365002578FD /* PagingView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE68C8945F34E870080F33DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81902D73D2C3A9ACF4F3A72D /* Pods-JTPagingView.debug.xcconfig */,
+				DFA0BE1B35164956B3D1282B /* Pods-JTPagingView.release.xcconfig */,
+				A8E3A77307BF69157E2B46F6 /* Pods-JTPagingViewTests.debug.xcconfig */,
+				6900902FF0B6F5102DCB241F /* Pods-JTPagingViewTests.release.xcconfig */,
+				FEB1B5AB55F5577EAA31661F /* Pods-JTPagingViewUITests.debug.xcconfig */,
+				5B02DCD67D55AB1F19E1991E /* Pods-JTPagingViewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77D4AF4421B8F2B7002578FD /* Build configuration list for PBXNativeTarget "JTPagingView" */;
 			buildPhases = (
+				DB19B6870E64C296AEAF0DB5 /* [CP] Check Pods Manifest.lock */,
 				77D4AF1421B8F2B6002578FD /* Sources */,
 				77D4AF1521B8F2B6002578FD /* Frameworks */,
 				77D4AF1621B8F2B6002578FD /* Resources */,
@@ -156,6 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77D4AF4721B8F2B7002578FD /* Build configuration list for PBXNativeTarget "JTPagingViewTests" */;
 			buildPhases = (
+				F6D1C2234278842A17448B7E /* [CP] Check Pods Manifest.lock */,
 				77D4AF2C21B8F2B7002578FD /* Sources */,
 				77D4AF2D21B8F2B7002578FD /* Frameworks */,
 				77D4AF2E21B8F2B7002578FD /* Resources */,
@@ -174,6 +286,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77D4AF4A21B8F2B7002578FD /* Build configuration list for PBXNativeTarget "JTPagingViewUITests" */;
 			buildPhases = (
+				5682909D7EADC1F52EBB8604 /* [CP] Check Pods Manifest.lock */,
 				77D4AF3721B8F2B7002578FD /* Sources */,
 				77D4AF3821B8F2B7002578FD /* Frameworks */,
 				77D4AF3921B8F2B7002578FD /* Resources */,
@@ -235,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D4AF6521B8F365002578FD /* PagingTopButtonView.xib in Resources */,
 				77D4AF2821B8F2B7002578FD /* LaunchScreen.storyboard in Resources */,
 				77D4AF2521B8F2B7002578FD /* Assets.xcassets in Resources */,
 				77D4AF2321B8F2B6002578FD /* Main.storyboard in Resources */,
@@ -257,14 +371,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5682909D7EADC1F52EBB8604 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JTPagingViewUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB19B6870E64C296AEAF0DB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JTPagingView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6D1C2234278842A17448B7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JTPagingViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		77D4AF1421B8F2B6002578FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77D4AF2021B8F2B6002578FD /* ViewController.m in Sources */,
+				77D4AF6A21B8F365002578FD /* PagingView.m in Sources */,
+				77D4AF6D21B8F38C002578FD /* BaseViewController.m in Sources */,
+				77D4AF6721B8F365002578FD /* PagingTopButtonView.m in Sources */,
+				77D4AF5221B8F359002578FD /* ViewController.m in Sources */,
+				77D4AF6621B8F365002578FD /* PagingBottomView.m in Sources */,
 				77D4AF2B21B8F2B7002578FD /* main.m in Sources */,
+				77D4AF6421B8F365002578FD /* PagingViewController.m in Sources */,
 				77D4AF1D21B8F2B6002578FD /* AppDelegate.m in Sources */,
+				77D4AF6921B8F365002578FD /* UIView+Extension.m in Sources */,
+				77D4AF6821B8F365002578FD /* PagingTopView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,10 +609,12 @@
 		};
 		77D4AF4521B8F2B7002578FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81902D73D2C3A9ACF4F3A72D /* Pods-JTPagingView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JTPagingView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,10 +627,12 @@
 		};
 		77D4AF4621B8F2B7002578FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA0BE1B35164956B3D1282B /* Pods-JTPagingView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JTPagingView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,6 +645,7 @@
 		};
 		77D4AF4821B8F2B7002578FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8E3A77307BF69157E2B46F6 /* Pods-JTPagingViewTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -481,6 +664,7 @@
 		};
 		77D4AF4921B8F2B7002578FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6900902FF0B6F5102DCB241F /* Pods-JTPagingViewTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +683,7 @@
 		};
 		77D4AF4B21B8F2B7002578FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEB1B5AB55F5577EAA31661F /* Pods-JTPagingViewUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JTPagingViewUITests/Info.plist;
@@ -516,6 +701,7 @@
 		};
 		77D4AF4C21B8F2B7002578FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B02DCD67D55AB1F19E1991E /* Pods-JTPagingViewUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JTPagingViewUITests/Info.plist;
