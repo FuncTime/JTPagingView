@@ -152,13 +152,14 @@
 			isa = PBXGroup;
 			children = (
 				77D4AF6E21B902DB002578FD /* JTPagingView */,
-				77D4AF5321B8F365002578FD /* Paging */,
 				77D4AF1B21B8F2B6002578FD /* AppDelegate.h */,
 				77D4AF1C21B8F2B6002578FD /* AppDelegate.m */,
 				77D4AF5021B8F359002578FD /* ViewController.h */,
 				77D4AF5121B8F359002578FD /* ViewController.m */,
 				77D4AF6B21B8F38B002578FD /* BaseViewController.h */,
 				77D4AF6C21B8F38C002578FD /* BaseViewController.m */,
+				77D4AF5521B8F365002578FD /* PagingViewController.m */,
+				77D4AF5621B8F365002578FD /* PagingViewController.h */,
 				77D4AF2121B8F2B6002578FD /* Main.storyboard */,
 				77D4AF2421B8F2B7002578FD /* Assets.xcassets */,
 				77D4AF2621B8F2B7002578FD /* LaunchScreen.storyboard */,
@@ -186,48 +187,7 @@
 			path = JTPagingViewUITests;
 			sourceTree = "<group>";
 		};
-		77D4AF5321B8F365002578FD /* Paging */ = {
-			isa = PBXGroup;
-			children = (
-				77D4AF5421B8F365002578FD /* Controller */,
-				77D4AF5721B8F365002578FD /* Model */,
-				77D4AF5821B8F365002578FD /* View */,
-			);
-			path = Paging;
-			sourceTree = "<group>";
-		};
-		77D4AF5421B8F365002578FD /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				77D4AF5521B8F365002578FD /* PagingViewController.m */,
-				77D4AF5621B8F365002578FD /* PagingViewController.h */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		77D4AF5721B8F365002578FD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		77D4AF5821B8F365002578FD /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		77D4AF6E21B902DB002578FD /* JTPagingView */ = {
-			isa = PBXGroup;
-			children = (
-				77D4AF6F21B90454002578FD /* JTPagingView */,
-			);
-			path = JTPagingView;
-			sourceTree = "<group>";
-		};
-		77D4AF6F21B90454002578FD /* JTPagingView */ = {
 			isa = PBXGroup;
 			children = (
 				77D4AF5D21B8F365002578FD /* PagingView.h */,
