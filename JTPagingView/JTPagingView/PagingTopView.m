@@ -81,7 +81,6 @@
             self.currentSelectButton = buttonView.pagingButton;
         }
         
-        
         self.lastButtonView = buttonView;
         [self.buttons addObject:buttonView];
         [buttonView setPagingButtonClickBlock:^(UIButton *sender) {
@@ -101,6 +100,22 @@
         }];
     }
     
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        //如果最后一个的最大Y坐标加上右边距的值小于屏幕宽度,就平分
+        float maxY = self.buttons.lastObject.x + self.buttons.lastObject.width + self.rightSpacing;
+        
+        if (maxY < SCREEN_WIDTH) {
+            
+            for (int i = 0; i < self.buttons.count; i ++) {
+                    [self.buttons[i] mas_updateConstraints:^(MASConstraintMaker *make) {
+                        make.width.mas_equalTo((SCREEN_WIDTH - maxY)/self.buttons.count + self.buttons[i].width);
+                    }];
+                    [self updateBottomLineFrame];
+            }
+        }
+    });
     //延迟获取frame
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         

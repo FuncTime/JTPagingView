@@ -30,7 +30,7 @@
     
     self.paging = [[PagingView alloc] init];
     
-    self.paging.titles = (NSMutableArray *)@[@"啊哈哈",@"啊哈啊哈哈啊哈哈哈",@"啊哈哈",@"啊啊哈哈哈哈",@"啊哈哈",@"啊哈哈",@"啊哈啊哈哈哈",@"啊哈啊哈哈啊哈哈哈",@"啊哈哈啊哈哈",@"啊哈哈"];
+    self.paging.titles = (NSMutableArray *)@[@"啊哈哈",@"啊啊哈哈啊",@"啊哈啊",@"啊啊哈哈啊",@"啊啊哈哈啊"];
     
     NSMutableArray *views = [NSMutableArray array];
     if ([self.title isEqualToString:@"分页"]) {
