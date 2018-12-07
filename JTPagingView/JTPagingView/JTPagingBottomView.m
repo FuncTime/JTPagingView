@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) NSMutableArray<UIView *> *views;
 
+@property (nonatomic, assign) UIDeviceOrientation lastOrient;
+
 @end
 
 @implementation JTPagingBottomView
@@ -57,8 +59,12 @@
         default:
             break;
     }
-    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH * self.viewNumber, 0);
-    [self.scrollView setContentOffset:CGPointMake(SCREEN_WIDTH * self.currentPage, 0) animated:YES];
+    if (self.lastOrient != orient && orient != UIDeviceOrientationFaceUp && orient != UIDeviceOrientationFaceDown) {
+        
+        self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH * self.viewNumber, 0);
+        [self.scrollView setContentOffset:CGPointMake(SCREEN_WIDTH * self.currentPage, 0) animated:YES];
+        self.lastOrient = orient;
+    }
 }
 
 - (void)createViews {
