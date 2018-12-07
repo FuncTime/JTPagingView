@@ -153,6 +153,9 @@
 //    }
     
     NSInteger page = scrollView.contentOffset.x / SCREEN_WIDTH;
+    if (self.buttons.count - 1 < page) {
+        return;
+    }
     CGFloat offsetX = self.buttons[page].centerX - SCREEN_WIDTH/2;
     CGFloat maxRight = self.scrollView.contentSize.width - SCREEN_WIDTH;
     //是否在中心的左边
