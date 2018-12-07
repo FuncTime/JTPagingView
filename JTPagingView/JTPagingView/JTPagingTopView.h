@@ -31,6 +31,8 @@
 
 //下划线颜色 默认红色
 @property (nonatomic, strong) UIColor *bottomLineColor;
+//下划线的宽度
+@property (nonatomic, assign) float bottomLineWidth;
 //选中字体颜色 默认红色
 @property (nonatomic, strong) UIColor *selectColor;
 //未选中字体颜色 默认黑色

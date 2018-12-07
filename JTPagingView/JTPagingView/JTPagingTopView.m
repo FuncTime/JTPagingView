@@ -93,10 +93,7 @@
                 self.pagingButtonClickBlock(sender);
             }
             
-            [UIView animateWithDuration:0.3 animations:^{
-                
-                self.bottomLine.frame = CGRectMake(self.buttons[sender.tag].x, self.buttons[sender.tag].y + self.buttons[sender.tag].height, self.buttons[sender.tag].width, 2);
-            }];
+            [self updateBottomLineFrame];
         }];
     }
     
@@ -112,17 +109,14 @@
                     [self.buttons[i] mas_updateConstraints:^(MASConstraintMaker *make) {
                         make.width.mas_equalTo((SCREEN_WIDTH - maxY)/self.buttons.count + self.buttons[i].width);
                     }];
-                    [self updateBottomLineFrame];
             }
+            [self updateBottomLineFrame];
         }
     });
-    //延迟获取frame
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        self.bottomLine = [[UIView alloc] initWithFrame:CGRectMake(self.buttons[0].x, self.buttons[0].y + self.buttons[0].height, self.buttons[0].width, 2)];
-        self.bottomLine.backgroundColor = self.bottomLineColor;
-        [self.scrollView addSubview:self.bottomLine];
-    });
+    
+    self.bottomLine.backgroundColor = self.bottomLineColor;
+    [self.scrollView addSubview:self.bottomLine];
+    [self updateBottomLineFrame];
 }
 
 - (void)selectTheSpecifiedCellWithNumber:(NSInteger)number {
@@ -135,10 +129,7 @@
     self.buttons[number].pagingButton.selected = YES;
     self.currentSelectButton = self.buttons[number].pagingButton;
     
-    [UIView animateWithDuration:0.3 animations:^{
-        
-        self.bottomLine.frame = CGRectMake(self.buttons[number].x, self.buttons[number].y + self.buttons[number].height, self.buttons[number].width, 2);
-    }];
+    [self updateBottomLineFrame];
 }
 
 - (void)pagingBottomScrollViewDidScroll:(UIScrollView *)scrollView {
@@ -232,13 +223,29 @@
 }
 
 - (void)updateBottomLineFrame {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    NSLog(@"updateBottomLineFrame");
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         [UIView animateWithDuration:0.3 animations:^{
             
-            self.bottomLine.frame = CGRectMake(self.buttons[self.currentSelectButton.tag].x, self.buttons[self.currentSelectButton.tag].y + self.buttons[self.currentSelectButton.tag].height, self.buttons[self.currentSelectButton.tag].width, 2);
+            self.bottomLine.frame = CGRectMake(self.bottomLineWidth > 0 ? self.buttons[self.currentSelectButton.tag].x + (self.buttons[self.currentSelectButton.tag].width - self.bottomLineWidth)/2: self.buttons[self.currentSelectButton.tag].x, self.buttons[self.currentSelectButton.tag].y + self.buttons[self.currentSelectButton.tag].height, self.bottomLineWidth > 0 ? self.bottomLineWidth : self.buttons[self.currentSelectButton.tag].width, 2);
         }];
     });
+}
+
+- (UIView *)bottomLine {
+    if (!_bottomLine) {
+        _bottomLine = [[UIView alloc] init];
+        _bottomLine.backgroundColor = self.bottomLineColor;
+        [_scrollView addSubview:self.bottomLine];
+    }
+    return _bottomLine;
+}
+
+- (void)setBottomLineWidth:(float)bottomLineWidth {
+    _bottomLineWidth = bottomLineWidth;
+    
+    [self updateBottomLineFrame];
 }
 
 /*

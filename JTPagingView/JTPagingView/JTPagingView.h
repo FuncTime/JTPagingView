@@ -37,6 +37,8 @@
 @property (nonatomic, assign) UIColor *topViewBackgroundColor;
 //bottomView背景色
 @property (nonatomic, assign) UIColor *bottomViewBackgroundColor;
+//下划线的宽度 大于0就是用bottomLineWidth,否则就是用每个button的宽度
+@property (nonatomic, assign) float bottomLineWidth;
 
 //页数--可以先不创建view,使用页数来创建scrollView的可滚动页数
 @property (nonatomic, assign) NSInteger pages;

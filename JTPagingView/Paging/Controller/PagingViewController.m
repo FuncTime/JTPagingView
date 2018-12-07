@@ -31,7 +31,7 @@
     self.paging = [[JTPagingView alloc] init];
     
     self.paging.titles = (NSMutableArray *)@[@"啊哈哈",@"啊啊哈哈啊"];
-    
+    self.paging.bottomLineWidth = 80;
     NSMutableArray *views = [NSMutableArray array];
     if ([self.title isEqualToString:@"分页"]) {
         

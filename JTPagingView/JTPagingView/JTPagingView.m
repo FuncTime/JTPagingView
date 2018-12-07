@@ -196,6 +196,12 @@
     self.pagingBottom.backgroundColor = bottomViewBackgroundColor;
 }
 
+- (void)setBottomLineWidth:(float)bottomLineWidth {
+    _bottomLineWidth = bottomLineWidth;
+    
+    self.pagingTop.bottomLineWidth = bottomLineWidth;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
