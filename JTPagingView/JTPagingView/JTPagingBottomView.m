@@ -28,6 +28,7 @@
         self.viewNumber = number;
         self.currentPage = 0;
         self.views = [NSMutableArray array];
+        self.animationType = bottomAnimationAlpha;
         [self createViews];
         [self addNotification];
     }
@@ -180,26 +181,54 @@
 
 - (void)animationWithView:(UIView *)view {
     
-    //缩放动画
-    CAKeyframeAnimation *zoom = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
-    NSMutableArray *values = [NSMutableArray array];
-    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5, 0.5, 1.0)]];
-    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
-    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.2, 1.2, 1.0)]];
-    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
-    zoom.values = values;
-    
-    // 透明度动画
-    CABasicAnimation *alpha = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    alpha.fromValue = @(0.5);
-    alpha.toValue = @(1.0);
-    
-    // 实例化一个动画组
-    CAAnimationGroup *group = [[CAAnimationGroup alloc] init];
-    group.animations = @[zoom,alpha];
-    group.duration = 0.3f;
-    
-    [view.layer addAnimation:group forKey:nil];
+    if (self.animationType == bottomAnimationNone) {
+        return;
+    }
+    if (self.animationType == bottomAnimationAlphaAndZoom) {
+
+        //缩放动画
+        CAKeyframeAnimation *zoom = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+        NSMutableArray *values = [NSMutableArray array];
+        [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5, 0.5, 1.0)]];
+        [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
+        [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.2, 1.2, 1.0)]];
+        [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
+        zoom.values = values;
+
+        // 透明度动画
+        CABasicAnimation *alpha = [CABasicAnimation animationWithKeyPath:@"opacity"];
+        alpha.fromValue = @(0.5);
+        alpha.toValue = @(1.0);
+
+        // 实例化一个动画组
+        CAAnimationGroup *group = [[CAAnimationGroup alloc] init];
+        group.animations = @[zoom,alpha];
+        group.duration = 0.3;
+
+        [view.layer addAnimation:group forKey:nil];
+    }
+    if (self.animationType == bottomAnimationAlpha) {
+        
+        // 透明度动画
+        CABasicAnimation *alpha = [CABasicAnimation animationWithKeyPath:@"opacity"];
+        alpha.fromValue = @(0.5);
+        alpha.toValue = @(1.0);
+        alpha.duration = 0.3;
+        [view.layer addAnimation:alpha forKey:nil];
+    }
+    if (self.animationType == bottomAnimationZoom) {
+        
+        //缩放动画
+        CAKeyframeAnimation *zoom = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+        NSMutableArray *values = [NSMutableArray array];
+        [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5, 0.5, 1.0)]];
+        [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
+        [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.2, 1.2, 1.0)]];
+        [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
+        zoom.values = values;
+        zoom.duration = 0.3;
+        [view.layer addAnimation:zoom forKey:nil];
+    }
 }
 
 - (void)dealloc {

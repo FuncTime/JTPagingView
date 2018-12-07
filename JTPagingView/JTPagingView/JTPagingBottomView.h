@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    bottomAnimationAlpha,
+    bottomAnimationZoom,
+    bottomAnimationAlphaAndZoom,
+    bottomAnimationNone,
+} BottomAnimationType;
+
 @interface JTPagingBottomView : UIView
 //bottom的scrollView
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -23,6 +30,8 @@
 @property (nonatomic, copy) void(^scrollViewDidScrollBlock)(UIScrollView *scrollView);
 //开始拖拽回调
 @property (nonatomic, copy) void(^scrollViewWillBeginDraggingBlock)(UIScrollView *scrollView);
+
+@property (nonatomic, assign) BottomAnimationType animationType;
 
 //一次添加一个view
 - (void)addViewForBottomView:(UIView *)view;

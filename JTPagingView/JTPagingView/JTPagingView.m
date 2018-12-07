@@ -210,6 +210,25 @@
     self.pagingTop.bottomLineWidth = bottomLineWidth;
 }
 
+- (void)setAnimationType:(PaingAnimationType)animationType {
+    _animationType = animationType;
+    
+    switch (animationType) {
+        case paingAnimationAlpha:
+            self.pagingBottom.animationType = bottomAnimationAlpha;
+            break;
+        case paingAnimationZoom:
+            self.pagingBottom.animationType = bottomAnimationZoom;
+            break;
+        case paingAnimationAlphaAndZoom:
+            self.pagingBottom.animationType = bottomAnimationAlphaAndZoom;
+            break;
+        default:
+            self.pagingBottom.animationType = bottomAnimationNone;
+            break;
+    }
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

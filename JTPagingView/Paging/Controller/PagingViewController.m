@@ -52,8 +52,8 @@
         }
         self.paging.views = views;
 //        self.paging.pages = 8;
-        
         [self.paging selectPageWithNumber:3];
+        self.paging.animationType = paingAnimationAlpha;
         
     }else if ([self.title isEqualToString:@"分页(添加一个)"]) {
         
