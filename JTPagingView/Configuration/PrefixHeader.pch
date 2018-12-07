@@ -17,5 +17,4 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define RANDOM_COLOR [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0]
-#define BOTTOM_LINE_COLOR [UIColor colorWithRed:255/255.0 green:0/255.0 blue:0/255.0 alpha:1.0]
 #endif /* PrefixHeader_pch */

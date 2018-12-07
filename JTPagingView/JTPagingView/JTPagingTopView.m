@@ -37,7 +37,7 @@
         _leftSpacing = 10;
         _buttonSpacing = 10;
         _rightSpacing = 10;
-        _bottomLineColor = BOTTOM_LINE_COLOR;
+        _bottomLineColor = [UIColor redColor];
         self.buttons = [[NSMutableArray alloc] init];
         [self createViews];
     }
