@@ -128,6 +128,14 @@
         self.pagingBottom.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH * pages, 0);
     }
 }
+//手动选择某页
+- (void)selectPageWithNumber:(NSInteger)number {
+    [self.pagingTop selectTheSpecifiedCellWithNumber:number];
+    for (int i = 0; i < number + 1; i ++) {
+        
+        [self.pagingBottom scrollToTheSpecifiedPageWithNumber:i];
+    }
+}
 
 - (void)setBottomLineColor:(UIColor *)bottomLineColor {
     _bottomLineColor = bottomLineColor;

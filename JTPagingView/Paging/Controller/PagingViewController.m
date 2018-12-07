@@ -30,12 +30,12 @@
     
     self.paging = [[JTPagingView alloc] init];
     
-    self.paging.titles = (NSMutableArray *)@[@"啊哈哈",@"啊啊哈哈啊"];
+    self.paging.titles = (NSMutableArray *)@[@"啊哈哈",@"啊啊哈哈啊",@"啊哈哈",@"啊哈哈",@"啊哈哈",@"啊哈哈",@"啊哈哈"];
     self.paging.bottomLineWidth = 80;
     NSMutableArray *views = [NSMutableArray array];
     if ([self.title isEqualToString:@"分页"]) {
         
-        for (int i = 0; i < self.paging.titles.count - 1; i ++) {
+        for (int i = 0; i < self.paging.titles.count; i ++) {
             UIView *view = [[UIView alloc] init];
             view.backgroundColor = RANDOM_COLOR;
             [views addObject:view];
@@ -51,7 +51,9 @@
             }
         }
         self.paging.views = views;
-        self.paging.pages = 8;
+//        self.paging.pages = 8;
+        
+        [self.paging selectPageWithNumber:3];
         
     }else if ([self.title isEqualToString:@"分页(添加一个)"]) {
         

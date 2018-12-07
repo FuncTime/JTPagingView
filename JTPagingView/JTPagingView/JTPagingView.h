@@ -46,4 +46,6 @@
 - (void)addViewForBottomView:(UIView *)view;
 //一次添加多个view
 - (void)addViewsForBottomView:(NSMutableArray<UIView *> *)views;
+//手动选择某页 从0开始
+- (void)selectPageWithNumber:(NSInteger)number;
 @end
