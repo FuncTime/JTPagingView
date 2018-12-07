@@ -1,24 +1,24 @@
 //
-//  PagingView.m
+//  JTPagingView.m
 //  myWheel
 //
 //  Created by xujiangtao on 2018/12/3.
 //  Copyright © 2018年 xujiangtao. All rights reserved.
 //
 
-#import "PagingView.h"
-#import "PagingTopView.h"
-#import "PagingBottomView.h"
+#import "JTPagingView.h"
+#import "JTPagingTopView.h"
+#import "JTPagingBottomView.h"
 
-@interface PagingView ()
+@interface JTPagingView ()
 
-@property (nonatomic, strong) PagingTopView *pagingTop;
+@property (nonatomic, strong) JTPagingTopView *pagingTop;
 
-@property (nonatomic, strong) PagingBottomView *pagingBottom;
+@property (nonatomic, strong) JTPagingBottomView *pagingBottom;
 
 @end
 
-@implementation PagingView
+@implementation JTPagingView
 
 - (instancetype)init
 {
@@ -45,7 +45,7 @@
     }
     
     if (!self.pagingTop) {
-        self.pagingTop = [[PagingTopView alloc] initWithTitles:titles];
+        self.pagingTop = [[JTPagingTopView alloc] initWithTitles:titles];
         [self addSubview:self.pagingTop];
         [self.pagingTop mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.top.equalTo(self);
@@ -71,7 +71,7 @@
     
     if (!self.pagingBottom) {
         
-        self.pagingBottom = [[PagingBottomView alloc] initWithNumberOfView:views.count];
+        self.pagingBottom = [[JTPagingBottomView alloc] initWithNumberOfView:views.count];
         [self.pagingBottom setCustomViews:views];
         [self addSubview:self.pagingBottom];
         [self.pagingBottom mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -102,7 +102,7 @@
     
     if (!self.pagingBottom) {
         
-        self.pagingBottom = [[PagingBottomView alloc] initWithNumberOfView:pages];
+        self.pagingBottom = [[JTPagingBottomView alloc] initWithNumberOfView:pages];
         [self addSubview:self.pagingBottom];
         [self.pagingBottom mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.pagingTop.mas_bottom);

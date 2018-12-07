@@ -17,12 +17,12 @@
 		77D4AF4021B8F2B7002578FD /* JTPagingViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF3F21B8F2B7002578FD /* JTPagingViewUITests.m */; };
 		77D4AF5221B8F359002578FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF5121B8F359002578FD /* ViewController.m */; };
 		77D4AF6421B8F365002578FD /* PagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF5521B8F365002578FD /* PagingViewController.m */; };
-		77D4AF6521B8F365002578FD /* PagingTopButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AF5E21B8F365002578FD /* PagingTopButtonView.xib */; };
-		77D4AF6621B8F365002578FD /* PagingBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF5F21B8F365002578FD /* PagingBottomView.m */; };
-		77D4AF6721B8F365002578FD /* PagingTopButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6021B8F365002578FD /* PagingTopButtonView.m */; };
-		77D4AF6821B8F365002578FD /* PagingTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6121B8F365002578FD /* PagingTopView.m */; };
+		77D4AF6521B8F365002578FD /* JTPagingTopButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AF5E21B8F365002578FD /* JTPagingTopButtonView.xib */; };
+		77D4AF6621B8F365002578FD /* JTPagingBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF5F21B8F365002578FD /* JTPagingBottomView.m */; };
+		77D4AF6721B8F365002578FD /* JTPagingTopButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6021B8F365002578FD /* JTPagingTopButtonView.m */; };
+		77D4AF6821B8F365002578FD /* JTPagingTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6121B8F365002578FD /* JTPagingTopView.m */; };
 		77D4AF6921B8F365002578FD /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6221B8F365002578FD /* UIView+Extension.m */; };
-		77D4AF6A21B8F365002578FD /* PagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6321B8F365002578FD /* PagingView.m */; };
+		77D4AF6A21B8F365002578FD /* JTPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6321B8F365002578FD /* JTPagingView.m */; };
 		77D4AF6D21B8F38C002578FD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AF6C21B8F38C002578FD /* BaseViewController.m */; };
 		7BDA478402230DDE5D712D94 /* libPods-JTPagingView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BCB42985DECF83332D80B5D /* libPods-JTPagingView.a */; };
 		CB6DB50BBB8A548CB7DE3F5A /* libPods-JTPagingViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DE73CB5C661826D0CC16FB /* libPods-JTPagingViewUITests.a */; };
@@ -67,17 +67,17 @@
 		77D4AF5121B8F359002578FD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		77D4AF5521B8F365002578FD /* PagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingViewController.m; sourceTree = "<group>"; };
 		77D4AF5621B8F365002578FD /* PagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingViewController.h; sourceTree = "<group>"; };
-		77D4AF5921B8F365002578FD /* PagingBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingBottomView.h; sourceTree = "<group>"; };
+		77D4AF5921B8F365002578FD /* JTPagingBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTPagingBottomView.h; sourceTree = "<group>"; };
 		77D4AF5A21B8F365002578FD /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		77D4AF5B21B8F365002578FD /* PagingTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingTopView.h; sourceTree = "<group>"; };
-		77D4AF5C21B8F365002578FD /* PagingTopButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingTopButtonView.h; sourceTree = "<group>"; };
-		77D4AF5D21B8F365002578FD /* PagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingView.h; sourceTree = "<group>"; };
-		77D4AF5E21B8F365002578FD /* PagingTopButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagingTopButtonView.xib; sourceTree = "<group>"; };
-		77D4AF5F21B8F365002578FD /* PagingBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingBottomView.m; sourceTree = "<group>"; };
-		77D4AF6021B8F365002578FD /* PagingTopButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingTopButtonView.m; sourceTree = "<group>"; };
-		77D4AF6121B8F365002578FD /* PagingTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingTopView.m; sourceTree = "<group>"; };
+		77D4AF5B21B8F365002578FD /* JTPagingTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTPagingTopView.h; sourceTree = "<group>"; };
+		77D4AF5C21B8F365002578FD /* JTPagingTopButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTPagingTopButtonView.h; sourceTree = "<group>"; };
+		77D4AF5D21B8F365002578FD /* JTPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTPagingView.h; sourceTree = "<group>"; };
+		77D4AF5E21B8F365002578FD /* JTPagingTopButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JTPagingTopButtonView.xib; sourceTree = "<group>"; };
+		77D4AF5F21B8F365002578FD /* JTPagingBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPagingBottomView.m; sourceTree = "<group>"; };
+		77D4AF6021B8F365002578FD /* JTPagingTopButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPagingTopButtonView.m; sourceTree = "<group>"; };
+		77D4AF6121B8F365002578FD /* JTPagingTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPagingTopView.m; sourceTree = "<group>"; };
 		77D4AF6221B8F365002578FD /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		77D4AF6321B8F365002578FD /* PagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingView.m; sourceTree = "<group>"; };
+		77D4AF6321B8F365002578FD /* JTPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPagingView.m; sourceTree = "<group>"; };
 		77D4AF6B21B8F38B002578FD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		77D4AF6C21B8F38C002578FD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		77D4AF7621B92984002578FD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -191,15 +191,15 @@
 		77D4AF6E21B902DB002578FD /* JTPagingView */ = {
 			isa = PBXGroup;
 			children = (
-				77D4AF5D21B8F365002578FD /* PagingView.h */,
-				77D4AF6321B8F365002578FD /* PagingView.m */,
-				77D4AF5B21B8F365002578FD /* PagingTopView.h */,
-				77D4AF6121B8F365002578FD /* PagingTopView.m */,
-				77D4AF5C21B8F365002578FD /* PagingTopButtonView.h */,
-				77D4AF6021B8F365002578FD /* PagingTopButtonView.m */,
-				77D4AF5E21B8F365002578FD /* PagingTopButtonView.xib */,
-				77D4AF5921B8F365002578FD /* PagingBottomView.h */,
-				77D4AF5F21B8F365002578FD /* PagingBottomView.m */,
+				77D4AF5D21B8F365002578FD /* JTPagingView.h */,
+				77D4AF6321B8F365002578FD /* JTPagingView.m */,
+				77D4AF5B21B8F365002578FD /* JTPagingTopView.h */,
+				77D4AF6121B8F365002578FD /* JTPagingTopView.m */,
+				77D4AF5C21B8F365002578FD /* JTPagingTopButtonView.h */,
+				77D4AF6021B8F365002578FD /* JTPagingTopButtonView.m */,
+				77D4AF5E21B8F365002578FD /* JTPagingTopButtonView.xib */,
+				77D4AF5921B8F365002578FD /* JTPagingBottomView.h */,
+				77D4AF5F21B8F365002578FD /* JTPagingBottomView.m */,
 				77D4AF5A21B8F365002578FD /* UIView+Extension.h */,
 				77D4AF6221B8F365002578FD /* UIView+Extension.m */,
 			);
@@ -366,7 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77D4AF6521B8F365002578FD /* PagingTopButtonView.xib in Resources */,
+				77D4AF6521B8F365002578FD /* JTPagingTopButtonView.xib in Resources */,
 				77D4AF2821B8F2B7002578FD /* LaunchScreen.storyboard in Resources */,
 				77D4AF2521B8F2B7002578FD /* Assets.xcassets in Resources */,
 				77D4AF2321B8F2B6002578FD /* Main.storyboard in Resources */,
@@ -451,16 +451,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77D4AF6A21B8F365002578FD /* PagingView.m in Sources */,
+				77D4AF6A21B8F365002578FD /* JTPagingView.m in Sources */,
 				77D4AF6D21B8F38C002578FD /* BaseViewController.m in Sources */,
-				77D4AF6721B8F365002578FD /* PagingTopButtonView.m in Sources */,
+				77D4AF6721B8F365002578FD /* JTPagingTopButtonView.m in Sources */,
 				77D4AF5221B8F359002578FD /* ViewController.m in Sources */,
-				77D4AF6621B8F365002578FD /* PagingBottomView.m in Sources */,
+				77D4AF6621B8F365002578FD /* JTPagingBottomView.m in Sources */,
 				77D4AF2B21B8F2B7002578FD /* main.m in Sources */,
 				77D4AF6421B8F365002578FD /* PagingViewController.m in Sources */,
 				77D4AF1D21B8F2B6002578FD /* AppDelegate.m in Sources */,
 				77D4AF6921B8F365002578FD /* UIView+Extension.m in Sources */,
-				77D4AF6821B8F365002578FD /* PagingTopView.m in Sources */,
+				77D4AF6821B8F365002578FD /* JTPagingTopView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

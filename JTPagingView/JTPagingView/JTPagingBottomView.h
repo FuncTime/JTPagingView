@@ -1,5 +1,5 @@
 //
-//  PagingBottomView.h
+//  JTPagingBottomView.h
 //  myWheel
 //
 //  Created by xujiangtao on 2018/12/3.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PagingBottomView : UIView
+@interface JTPagingBottomView : UIView
 //bottom的scrollView
 @property (nonatomic, strong) UIScrollView *scrollView;
 //上下的个数可以不一样

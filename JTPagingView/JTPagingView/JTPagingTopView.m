@@ -1,22 +1,22 @@
 //
-//  PagingTopView.m
+//  JTPagingTopView.m
 //  myWheel
 //
 //  Created by xujiangtao on 2018/12/3.
 //  Copyright © 2018年 xujiangtao. All rights reserved.
 //
 
-#import "PagingTopView.h"
-#import "PagingTopButtonView.h"
+#import "JTPagingTopView.h"
+#import "JTPagingTopButtonView.h"
 #import "UIView+Extension.h"
 
-@interface PagingTopView ()<UIScrollViewDelegate>
+@interface JTPagingTopView ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *titles;
 
-@property (nonatomic, strong) NSMutableArray<PagingTopButtonView *> *buttons;
+@property (nonatomic, strong) NSMutableArray<JTPagingTopButtonView *> *buttons;
 
-@property (nonatomic, strong) PagingTopButtonView *lastButtonView;
+@property (nonatomic, strong) JTPagingTopButtonView *lastButtonView;
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation PagingTopView
+@implementation JTPagingTopView
 
 - (instancetype)initWithTitles:(NSMutableArray *)titles {
     self = [super init];
@@ -57,7 +57,7 @@
     }];
     
     for (int i = 0; i < self.titles.count; i ++) {
-        PagingTopButtonView *buttonView = [[[NSBundle mainBundle] loadNibNamed:@"PagingTopButtonView" owner:self options:nil] firstObject];
+        JTPagingTopButtonView *buttonView = [[[NSBundle mainBundle] loadNibNamed:@"JTPagingTopButtonView" owner:self options:nil] firstObject];
         [buttonView.pagingButton setTitle:self.titles[i] forState:UIControlStateNormal];
         buttonView.pagingButton.tag = i;
         [scrollView addSubview:buttonView];
@@ -188,7 +188,7 @@
 - (void)setSelectColor:(UIColor *)selectColor {
     _selectColor = selectColor;
     
-    for (PagingTopButtonView *view in self.buttons) {
+    for (JTPagingTopButtonView *view in self.buttons) {
         [view.pagingButton setTitleColor:selectColor forState:UIControlStateSelected];
     }
 }
@@ -196,7 +196,7 @@
 - (void)setNoSelectColor:(UIColor *)noSelectColor {
     _noSelectColor = noSelectColor;
     
-    for (PagingTopButtonView *view in self.buttons) {
+    for (JTPagingTopButtonView *view in self.buttons) {
         [view.pagingButton setTitleColor:noSelectColor forState:UIControlStateNormal];
     }
 }

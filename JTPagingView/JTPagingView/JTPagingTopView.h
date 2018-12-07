@@ -1,5 +1,5 @@
 //
-//  PagingTopView.h
+//  JTPagingTopView.h
 //  myWheel
 //
 //  Created by xujiangtao on 2018/12/3.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PagingTopView : UIView
+@interface JTPagingTopView : UIView
 //分页的按钮点击回调
 @property (nonatomic, copy) void(^pagingButtonClickBlock)(UIButton *sender);
 //初始化方法 titles:标题数组

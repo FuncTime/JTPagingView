@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PagingTopButtonView">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JTPagingTopButtonView">
             <rect key="frame" x="0.0" y="0.0" width="242" height="134"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -41,7 +41,7 @@
             <connections>
                 <outlet property="pagingButton" destination="VF4-LU-88U" id="vJm-47-Hwu"/>
             </connections>
-            <point key="canvasLocation" x="-117" y="185"/>
+            <point key="canvasLocation" x="-13" y="112"/>
         </view>
     </objects>
 </document>

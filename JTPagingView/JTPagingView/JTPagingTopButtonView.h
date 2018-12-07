@@ -1,5 +1,5 @@
 //
-//  PagingTopButtonView.h
+//  JTPagingTopButtonView.h
 //  myWheel
 //
 //  Created by xujiangtao on 2018/12/4.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PagingTopButtonView : UIView
+@interface JTPagingTopButtonView : UIView
 
 //buttonView上的标题按钮 可以自定义
 @property (weak, nonatomic) IBOutlet UIButton *pagingButton;

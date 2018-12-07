@@ -1,14 +1,14 @@
 //
-//  PagingBottomView.m
+//  JTPagingBottomView.m
 //  myWheel
 //
 //  Created by xujiangtao on 2018/12/3.
 //  Copyright © 2018年 xujiangtao. All rights reserved.
 //
 
-#import "PagingBottomView.h"
+#import "JTPagingBottomView.h"
 
-@interface PagingBottomView ()<UIScrollViewDelegate>
+@interface JTPagingBottomView ()<UIScrollViewDelegate>
 
 @property (nonatomic, assign) NSInteger viewNumber;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation PagingBottomView
+@implementation JTPagingBottomView
 
 - (instancetype)initWithNumberOfView:(NSInteger)number {
     self = [super init];

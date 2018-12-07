@@ -1,5 +1,5 @@
 //
-//  PagingView.h
+//  JTPagingView.h
 //  myWheel
 //
 //  Created by xujiangtao on 2018/12/3.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PagingView : UIView
+@interface JTPagingView : UIView
 
 //返回当前即将显示页数
 @property (nonatomic, copy) void(^currentPageBlock)(NSInteger currentPage);

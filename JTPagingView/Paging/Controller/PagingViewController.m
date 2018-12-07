@@ -7,11 +7,11 @@
 //
 
 #import "PagingViewController.h"
-#import "PagingView.h"
+#import "JTPagingView.h"
 
 @interface PagingViewController ()
 
-@property (nonatomic, strong) PagingView *paging;
+@property (nonatomic, strong) JTPagingView *paging;
 
 @end
 
@@ -28,9 +28,9 @@
     UIBarButtonItem *rightBarWinConstraints = [[UIBarButtonItem alloc] initWithTitle:@"约束" style:UIBarButtonItemStylePlain target:self action:@selector(constraintsButtonClick:)];
     self.navigationItem.rightBarButtonItems = @[rightBar,rightBarWinConstraints];
     
-    self.paging = [[PagingView alloc] init];
+    self.paging = [[JTPagingView alloc] init];
     
-    self.paging.titles = (NSMutableArray *)@[@"啊哈哈",@"啊啊哈哈啊",@"啊哈啊",@"啊啊哈哈啊",@"啊啊哈哈啊"];
+    self.paging.titles = (NSMutableArray *)@[@"啊哈哈",@"啊啊哈哈啊"];
     
     NSMutableArray *views = [NSMutableArray array];
     if ([self.title isEqualToString:@"分页"]) {

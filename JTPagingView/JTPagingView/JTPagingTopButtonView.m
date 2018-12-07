@@ -1,14 +1,14 @@
 //
-//  PagingTopButtonView.m
+//  JTPagingTopButtonView.m
 //  myWheel
 //
 //  Created by xujiangtao on 2018/12/4.
 //  Copyright © 2018年 xujiangtao. All rights reserved.
 //
 
-#import "PagingTopButtonView.h"
+#import "JTPagingTopButtonView.h"
 
-@implementation PagingTopButtonView
+@implementation JTPagingTopButtonView
 - (IBAction)pagingButtonClick:(UIButton *)sender {
     if (self.pagingButtonClickBlock) {
         self.pagingButtonClickBlock(sender);
