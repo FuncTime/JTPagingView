@@ -98,7 +98,25 @@
     return self.frame.size;
 }
 
+- (void)setMaxX:(CGFloat)maxX
+{
+    self.x = maxX - self.width;
+}
 
+- (CGFloat)maxX
+{
+    return CGRectGetMaxX(self.frame);
+}
+
+- (void)setMaxY:(CGFloat)maxY
+{
+    self.y = maxY - self.height;
+}
+
+- (CGFloat)maxY
+{
+    return CGRectGetMaxY(self.frame);
+}
 
 /*
  * 当前这个View是否和keyWindow有重叠

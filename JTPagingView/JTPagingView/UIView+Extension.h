@@ -21,6 +21,16 @@
 @property (nonatomic, assign) CGFloat y;
 
 /**
+ 控件右上角 x 坐标
+ */
+@property (nonatomic, assign) CGFloat maxX;
+
+/**
+ 控件右上角 y 坐标
+ */
+@property (nonatomic, assign) CGFloat maxY;
+
+/**
  控件的中心点 x 坐标
  */
 @property (nonatomic, assign) CGFloat centerX;
