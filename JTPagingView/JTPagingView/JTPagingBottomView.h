@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+//动画类型枚举
 typedef enum : NSUInteger {
     bottomAnimationAlpha,
     bottomAnimationZoom,
@@ -30,7 +31,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) void(^scrollViewDidScrollBlock)(UIScrollView *scrollView);
 //开始拖拽回调
 @property (nonatomic, copy) void(^scrollViewWillBeginDraggingBlock)(UIScrollView *scrollView);
-
+//动画类型
 @property (nonatomic, assign) BottomAnimationType animationType;
 
 //一次添加一个view

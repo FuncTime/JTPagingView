@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+//动画类型枚举
 typedef enum : NSUInteger {
     paingAnimationAlpha,
     paingAnimationZoom,
@@ -47,7 +48,7 @@ typedef enum : NSUInteger {
 //下划线的宽度 大于0就是用bottomLineWidth,否则就是用每个button的宽度
 @property (nonatomic, assign) float bottomLineWidth;
 
-//使用动画类型
+//动画类型
 @property (nonatomic, assign) PaingAnimationType animationType;
 
 //页数--可以先不创建view,使用页数来创建scrollView的可滚动页数
