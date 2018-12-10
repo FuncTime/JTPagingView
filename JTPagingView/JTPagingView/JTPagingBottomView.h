@@ -37,5 +37,6 @@ typedef enum : NSUInteger {
 - (void)addViewForBottomView:(UIView *)view;
 //一次添加多个view
 - (void)addViewsForBottomView:(NSMutableArray<UIView *> *)views;
-
+//移除所有view
+- (void)removeAllViews;
 @end

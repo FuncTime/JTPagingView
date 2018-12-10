@@ -185,6 +185,15 @@
     }
 }
 
+//移除所有view
+- (void)removeAllViews {
+    
+    for (UIView *view in self.scrollView.subviews) {
+        [view removeFromSuperview];
+    }
+    [self.views removeAllObjects];
+}
+
 - (void)animationWithView:(UIView *)view {
     
     if (self.animationType == bottomAnimationNone) {

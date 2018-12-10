@@ -52,10 +52,21 @@ typedef enum : NSUInteger {
 
 //页数--可以先不创建view,使用页数来创建scrollView的可滚动页数
 @property (nonatomic, assign) NSInteger pages;
+
 //一次添加一个view
 - (void)addViewForBottomView:(UIView *)view;
 //一次添加多个view
 - (void)addViewsForBottomView:(NSMutableArray<UIView *> *)views;
+//移除所有view
+- (void)removeAllViews;
+
+//一次添加一个标题
+- (void)addTitleForTopView:(NSString *)title;
+//一次添加多个标题
+- (void)addTitlesForTopView:(NSMutableArray *)titles;
+//移除所有标题
+- (void)removeAllTitles;
+
 //手动选择某页 从0开始
 - (void)selectPageWithNumber:(NSInteger)number;
 @end

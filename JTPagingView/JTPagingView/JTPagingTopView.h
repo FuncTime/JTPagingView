@@ -38,4 +38,12 @@
 //未选中字体颜色 默认黑色
 @property (nonatomic, strong) UIColor *noSelectColor;
 
+//一次添加一个标题
+- (void)addTitleForTopView:(NSString *)title;
+//一次添加多个标题
+- (void)addTitlesForTopView:(NSMutableArray *)titles;
+//移除所有标题
+- (void)removeAllTitles;
+
+
 @end

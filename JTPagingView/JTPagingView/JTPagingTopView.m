@@ -26,6 +26,8 @@
 
 @property (nonatomic, assign) float lastScrollX;
 
+@property (nonatomic, assign) NSInteger currentIndexForAdd;
+
 @end
 
 @implementation JTPagingTopView
@@ -33,11 +35,13 @@
 - (instancetype)initWithTitles:(NSMutableArray *)titles {
     self = [super init];
     if (self) {
-        _titles = titles;
+        [self.titles addObjectsFromArray:titles];;
         _leftSpacing = 10;
         _buttonSpacing = 10;
         _rightSpacing = 10;
         _bottomLineColor = [UIColor redColor];
+        _selectColor = [UIColor redColor];
+        _noSelectColor = [UIColor blackColor];
         self.buttons = [[NSMutableArray alloc] init];
         [self createViews];
     }
@@ -46,37 +50,29 @@
 
 - (void)createViews {
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
-    self.scrollView = scrollView;
-    scrollView.showsHorizontalScrollIndicator = NO;
-    scrollView.alwaysBounceHorizontal = YES;
-    scrollView.delegate = self;
-    [self addSubview:scrollView];
-    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.bottom.equalTo(self);
-    }];
-    
     for (int i = 0; i < self.titles.count; i ++) {
         JTPagingTopButtonView *buttonView = [[[NSBundle mainBundle] loadNibNamed:@"JTPagingTopButtonView" owner:self options:nil] firstObject];
         [buttonView.pagingButton setTitle:self.titles[i] forState:UIControlStateNormal];
+        [buttonView.pagingButton setTitleColor:self.selectColor forState:UIControlStateSelected];
+        [buttonView.pagingButton setTitleColor:self.noSelectColor forState:UIControlStateNormal];
         buttonView.pagingButton.tag = i;
-        [scrollView addSubview:buttonView];
+        [self.scrollView addSubview:buttonView];
         
         [buttonView mas_makeConstraints:^(MASConstraintMaker *make) {
             if (i == 0) {
-                make.left.equalTo(scrollView).offset(self.leftSpacing);
+                make.left.equalTo(self.scrollView).offset(self.leftSpacing);
             }else {
                 make.left.equalTo(self.lastButtonView.mas_right).offset(self.buttonSpacing);
             }
-            make.centerY.equalTo(scrollView);
+            make.centerY.equalTo(self.scrollView);
             
             if (i == self.titles.count - 1) {
-                make.right.equalTo(scrollView).offset(- self.rightSpacing);
+                make.right.equalTo(self.scrollView).offset(- self.rightSpacing);
             }
         }];
         
         //第一个
-        if (i == 0) {
+        if (i == 0 && self.currentIndexForAdd == 0) {
             buttonView.pagingButton.selected = YES;
             self.currentSelectButton = buttonView.pagingButton;
         }
@@ -92,7 +88,7 @@
             if (self.pagingButtonClickBlock) {
                 self.pagingButtonClickBlock(sender);
             }
-            
+            self.currentIndexForAdd = sender.tag;
             [self updateBottomLineFrame];
         }];
     }
@@ -128,7 +124,7 @@
     self.currentSelectButton.selected = NO;
     self.buttons[number].pagingButton.selected = YES;
     self.currentSelectButton = self.buttons[number].pagingButton;
-    
+    self.currentIndexForAdd = number;
     [self updateBottomLineFrame];
 }
 
@@ -227,6 +223,9 @@
 
 - (void)updateBottomLineFrame {
     NSLog(@"updateBottomLineFrame");
+    if (self.buttons.count == 0) {
+        return;
+    }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         [UIView animateWithDuration:0.3 animations:^{
@@ -249,6 +248,69 @@
     _bottomLineWidth = bottomLineWidth;
     
     [self updateBottomLineFrame];
+}
+
+//一次添加一个标题
+- (void)addTitleForTopView:(NSString *)title {
+    
+    self.lastButtonView = nil;
+    [self.buttons removeAllObjects];
+    [self.titles addObject:title];
+    while (self.scrollView.subviews.count) {
+        [self.scrollView.subviews.lastObject removeFromSuperview];
+    }
+    
+    [self createViews];
+    self.buttons[self.currentIndexForAdd].pagingButton.selected = YES;
+    self.currentSelectButton = self.buttons[self.currentIndexForAdd].pagingButton;
+    [self updateBottomLineFrame];
+}
+//一次添加多个标题
+- (void)addTitlesForTopView:(NSMutableArray<NSString *> *)titles {
+    
+    self.lastButtonView = nil;
+    [self.buttons removeAllObjects];
+    [self.titles addObjectsFromArray:titles];
+    while (self.scrollView.subviews.count) {
+        [self.scrollView.subviews.lastObject removeFromSuperview];
+    }
+    
+    [self createViews];
+    self.buttons[self.currentIndexForAdd].pagingButton.selected = YES;
+    self.currentSelectButton = self.buttons[self.currentIndexForAdd].pagingButton;
+    [self updateBottomLineFrame];
+}
+//移除所有标题
+- (void)removeAllTitles {
+    
+    self.lastButtonView = nil;
+    [self.buttons removeAllObjects];
+    [self.titles removeAllObjects];
+    while (self.scrollView.subviews.count) {
+        [self.scrollView.subviews.lastObject removeFromSuperview];
+    }
+    self.currentSelectButton = 0;
+}
+
+- (NSMutableArray *)titles {
+    if (!_titles) {
+        _titles = [NSMutableArray array];
+    }
+    return _titles;
+}
+
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.alwaysBounceHorizontal = YES;
+        _scrollView.delegate = self;
+        [self addSubview:_scrollView];
+        [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.top.bottom.equalTo(self);
+        }];
+    }
+    return _scrollView;
 }
 
 /*

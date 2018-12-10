@@ -30,8 +30,8 @@
     
     self.paging = [[JTPagingView alloc] init];
     
-    self.paging.titles = (NSMutableArray *)@[@"啊哈哈",@"啊啊哈哈啊",@"啊哈哈",@"啊哈哈",@"啊哈哈",@"啊哈哈",@"啊哈哈"];
-    self.paging.bottomLineWidth = 80;
+    self.paging.titles = (NSMutableArray *)@[@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈"];
+//    self.paging.bottomLineWidth = 80;
     NSMutableArray *views = [NSMutableArray array];
     if ([self.title isEqualToString:@"分页"]) {
         
@@ -81,9 +81,9 @@
         NSLog(@"currentPage---%ld",currentPage);
     };
     
-    self.paging.bottomLineColor = [UIColor blackColor];
-    self.paging.selectColor = [UIColor blueColor];
-    self.paging.noSelectColor = [UIColor lightGrayColor];
+//    self.paging.bottomLineColor = [UIColor blackColor];
+//    self.paging.selectColor = [UIColor blueColor];
+//    self.paging.noSelectColor = [UIColor lightGrayColor];
     
 }
 
@@ -95,31 +95,33 @@
         [views addObject:view];
         view.backgroundColor = RANDOM_COLOR;
     }
-    
+
     if ([self.title isEqualToString:@"分页(添加一个)"]) {
         UIView *view = [UIView new];
         view.backgroundColor = RANDOM_COLOR;
         [self.paging addViewForBottomView:view];
     }else if ([self.title isEqualToString:@"分页(添加多个,3个为例)"]) {
-        
+
         [self.paging addViewsForBottomView:views];
     }else {
         UIView *view = [UIView new];
         view.backgroundColor = RANDOM_COLOR;
         [self.paging addViewForBottomView:view];
     }
-    
+//    [self.paging removeAllTitles];
 }
 
 - (void)constraintsButtonClick:(UIBarButtonItem *)item {
     
-    self.paging.leftSpacing = 50;
-    self.paging.rightSpacing = 30;
-    self.paging.buttonSpacing = 20;
-    self.paging.topViewHeight = 100;
+//    self.paging.leftSpacing = 50;
+//    self.paging.rightSpacing = 30;
+//    self.paging.buttonSpacing = 20;
+//    self.paging.topViewHeight = 100;
     
 //    self.paging.bottomViewBackgroundColor = [UIColor grayColor];
 //    self.paging.topViewBackgroundColor = [UIColor lightGrayColor];
+    
+//    [self.paging addTitleForTopView:@"呀呀"];
 }
 
 - (void)didReceiveMemoryWarning {

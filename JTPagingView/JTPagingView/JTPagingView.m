@@ -40,9 +40,9 @@
 
 - (void)setTitles:(NSMutableArray *)titles {
     _titles = titles;
-    if (titles.count == 0) {
-        return;
-    }
+//    if (titles.count == 0) {
+//        return;
+//    }
     
     if (!self.pagingTop) {
         self.pagingTop = [[JTPagingTopView alloc] initWithTitles:titles];
@@ -65,9 +65,9 @@
 
 - (void)setViews:(NSMutableArray *)views {
     _views = views;
-    if (views.count == 0) {
-        return;
-    }
+//    if (views.count == 0) {
+//        return;
+//    }
     
     if (!self.pagingBottom) {
         
@@ -162,6 +162,23 @@
 //一次添加多个view
 - (void)addViewsForBottomView:(NSMutableArray<UIView *> *)views {
     [self.pagingBottom addViewsForBottomView:views];
+}
+//移除所有view
+- (void)removeAllViews {
+    [self.pagingBottom removeAllViews];
+}
+
+//一次添加一个标题
+- (void)addTitleForTopView:(NSString *)title {
+    [self.pagingTop addTitleForTopView:title];
+}
+//一次添加多个标题
+- (void)addTitlesForTopView:(NSMutableArray *)titles {
+    [self.pagingTop addTitlesForTopView:titles];
+}
+//移除所有标题
+- (void)removeAllTitles {
+    [self.pagingTop removeAllTitles];
 }
 
 - (void)setLeftSpacing:(float)leftSpacing {
