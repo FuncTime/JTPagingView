@@ -55,4 +55,14 @@
 - (void)addViewsForBottomView:(NSMutableArray<UIView *> *)views;
 //移除所有view
 - (void)removeAllViews;
+
+//一次添加一个标题
+- (void)addTitleForTopView:(NSString *)title;
+//一次添加多个标题
+- (void)addTitlesForTopView:(NSMutableArray *)titles;
+//移除所有标题
+- (void)removeAllTitles;
+
+//手动选择某页 从0开始
+- (void)selectPageWithNumber:(NSInteger)number;
 ```
