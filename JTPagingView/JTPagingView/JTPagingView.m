@@ -20,24 +20,6 @@
 
 @implementation JTPagingView
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self initData];
-        [self createViews];
-    }
-    return self;
-}
-
-- (void)initData {
-    
-}
-
-- (void)createViews {
-    
-}
-
 - (void)setTitles:(NSMutableArray *)titles {
     _titles = titles;
 //    if (titles.count == 0) {

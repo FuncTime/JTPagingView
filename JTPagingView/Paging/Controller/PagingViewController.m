@@ -28,14 +28,18 @@
     UIBarButtonItem *rightBarWinConstraints = [[UIBarButtonItem alloc] initWithTitle:@"约束" style:UIBarButtonItemStylePlain target:self action:@selector(constraintsButtonClick:)];
     self.navigationItem.rightBarButtonItems = @[rightBar,rightBarWinConstraints];
     
-    self.paging = [[JTPagingView alloc] init];
     
-    self.paging.titles = (NSMutableArray *)@[@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈"];
+    
+    NSMutableArray *titles = (NSMutableArray *)@[@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈"];
 //    self.paging.bottomLineWidth = 80;
     NSMutableArray *views = [NSMutableArray array];
+    self.paging = [[JTPagingView alloc] init];
+    self.paging.titles = titles;
+    
+    
     if ([self.title isEqualToString:@"分页"]) {
         
-        for (int i = 0; i < self.paging.titles.count; i ++) {
+        for (int i = 0; i < titles.count; i ++) {
             UIView *view = [[UIView alloc] init];
             view.backgroundColor = RANDOM_COLOR;
             [views addObject:view];
@@ -50,6 +54,8 @@
                 }];
             }
         }
+        
+        
         self.paging.views = views;
 //        self.paging.pages = 8;
 //        [self.paging selectPageWithNumber:3];
