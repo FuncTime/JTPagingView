@@ -22,61 +22,12 @@
 
 - (void)setTitles:(NSMutableArray *)titles {
     _titles = titles;
-//    if (titles.count == 0) {
-//        return;
-//    }
-    
-    if (!self.pagingTop) {
-        self.pagingTop = [[JTPagingTopView alloc] initWithTitles:titles];
-        [self addSubview:self.pagingTop];
-        [self.pagingTop mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.top.equalTo(self);
-            make.height.mas_equalTo(45);
-        }];
-        
-        __weak typeof(self) weakSelf = self;
-        self.pagingTop.pagingButtonClickBlock = ^(UIButton *sender) {
-            [weakSelf.pagingBottom scrollToTheSpecifiedPageWithNumber:sender.tag];
-            if (weakSelf.currentPageBlock) {
-                weakSelf.currentPageBlock(sender.tag);
-            }
-            weakSelf.currentPage = sender.tag;
-        };
-    }
+    [self pagingTop];
 }
 
 - (void)setViews:(NSMutableArray *)views {
     _views = views;
-//    if (views.count == 0) {
-//        return;
-//    }
-    
-    if (!self.pagingBottom) {
-        
-        self.pagingBottom = [[JTPagingBottomView alloc] initWithNumberOfView:views.count];
-        [self.pagingBottom setCustomViews:views];
-        [self addSubview:self.pagingBottom];
-        [self.pagingBottom mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.pagingTop.mas_bottom);
-            make.left.right.bottom.equalTo(self);
-        }];
-        
-        __weak typeof(self) weakSelf = self;
-        self.pagingBottom.scrollViewDidEndDeceleratingBlock = ^(UIScrollView *scrollView) {
-            NSInteger currentPage = scrollView.contentOffset.x/SCREEN_WIDTH;
-            [weakSelf.pagingTop selectTheSpecifiedCellWithNumber:currentPage];
-            if (weakSelf.currentPageBlock) {
-                weakSelf.currentPageBlock(currentPage);
-            }
-            weakSelf.currentPage = currentPage;
-        };
-        self.pagingBottom.scrollViewDidScrollBlock = ^(UIScrollView *scrollView) {
-            [weakSelf.pagingTop pagingBottomScrollViewDidScroll:scrollView];
-        };
-        self.pagingBottom.scrollViewWillBeginDraggingBlock = ^(UIScrollView *scrollView) {
-            [weakSelf.pagingTop pagingBottomscrollViewWillBeginDragging:scrollView];
-        };
-    }
+    [self pagingBottom];
 }
 
 - (void)setPages:(NSInteger)pages {
@@ -226,6 +177,56 @@
             self.pagingBottom.animationType = bottomAnimationNone;
             break;
     }
+}
+
+- (JTPagingTopView *)pagingTop {
+    if (!_pagingTop) {
+        _pagingTop = [[JTPagingTopView alloc] initWithTitles:_titles];
+        [self addSubview:_pagingTop];
+        [_pagingTop mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.top.equalTo(self);
+            make.height.mas_equalTo(45);
+        }];
+        
+        __weak typeof(self) weakSelf = self;
+        _pagingTop.pagingButtonClickBlock = ^(UIButton *sender) {
+            [weakSelf.pagingBottom scrollToTheSpecifiedPageWithNumber:sender.tag];
+            if (weakSelf.currentPageBlock) {
+                weakSelf.currentPageBlock(sender.tag);
+            }
+            weakSelf.currentPage = sender.tag;
+        };
+    }
+    return _pagingTop;
+}
+
+- (JTPagingBottomView *)pagingBottom {
+    if (!_pagingBottom) {
+        _pagingBottom = [[JTPagingBottomView alloc] initWithNumberOfView:_views.count];
+        [_pagingBottom setCustomViews:_views];
+        [self addSubview:_pagingBottom];
+        [_pagingBottom mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.pagingTop.mas_bottom);
+            make.left.right.bottom.equalTo(self);
+        }];
+        
+        __weak typeof(self) weakSelf = self;
+        _pagingBottom.scrollViewDidEndDeceleratingBlock = ^(UIScrollView *scrollView) {
+            NSInteger currentPage = scrollView.contentOffset.x/SCREEN_WIDTH;
+            [weakSelf.pagingTop selectTheSpecifiedCellWithNumber:currentPage];
+            if (weakSelf.currentPageBlock) {
+                weakSelf.currentPageBlock(currentPage);
+            }
+            weakSelf.currentPage = currentPage;
+        };
+        _pagingBottom.scrollViewDidScrollBlock = ^(UIScrollView *scrollView) {
+            [weakSelf.pagingTop pagingBottomScrollViewDidScroll:scrollView];
+        };
+        _pagingBottom.scrollViewWillBeginDraggingBlock = ^(UIScrollView *scrollView) {
+            [weakSelf.pagingTop pagingBottomscrollViewWillBeginDragging:scrollView];
+        };
+    }
+    return _pagingBottom;
 }
 
 /*
