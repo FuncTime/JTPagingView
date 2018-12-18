@@ -33,9 +33,8 @@
 - (void)setPages:(NSInteger)pages {
     _pages = pages;
     
-    if (!self.pagingBottom) {
+    if (!_pagingBottom) {
         
-        self.pagingBottom = [[JTPagingBottomView alloc] initWithNumberOfView:pages];
         [self addSubview:self.pagingBottom];
         [self.pagingBottom mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.pagingTop.mas_bottom);
@@ -202,8 +201,13 @@
 
 - (JTPagingBottomView *)pagingBottom {
     if (!_pagingBottom) {
-        _pagingBottom = [[JTPagingBottomView alloc] initWithNumberOfView:_views.count];
-        [_pagingBottom setCustomViews:_views];
+        if (_pages) {
+            _pagingBottom = [[JTPagingBottomView alloc] initWithNumberOfView:_pages];
+        }else {
+            
+            _pagingBottom = [[JTPagingBottomView alloc] initWithNumberOfView:_views.count];
+            [_pagingBottom setCustomViews:_views];
+        }
         [self addSubview:_pagingBottom];
         [_pagingBottom mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.pagingTop.mas_bottom);
@@ -230,11 +234,11 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end
