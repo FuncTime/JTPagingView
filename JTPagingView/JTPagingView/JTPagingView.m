@@ -20,9 +20,21 @@
 
 @implementation JTPagingView
 
++ (instancetype)pagingWithTitles:(NSMutableArray *)titles views:(NSMutableArray *)views {
+    
+    JTPagingView *paging = [[JTPagingView alloc] init];
+    paging.titles = titles;
+    paging.views = views;
+    return paging;
+}
+
 - (void)setTitles:(NSMutableArray *)titles {
     _titles = titles;
-    [self pagingTop];
+    if (_pagingTop) {
+        [self.pagingTop addTitlesForTopView:titles];
+    }else {
+        [self pagingTop];
+    }
 }
 
 - (void)setViews:(NSMutableArray *)views {
@@ -180,11 +192,15 @@
 
 - (JTPagingTopView *)pagingTop {
     if (!_pagingTop) {
-        _pagingTop = [[JTPagingTopView alloc] initWithTitles:_titles];
+        if (_titles == nil || _titles.count == 0) {
+            _pagingTop = [[JTPagingTopView alloc] init];
+        }else {
+            _pagingTop = [[JTPagingTopView alloc] initWithTitles:_titles];
+        }
         [self addSubview:_pagingTop];
         [_pagingTop mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.top.equalTo(self);
-            make.height.mas_equalTo(45);
+            make.height.mas_equalTo(PagingTopHeight);
         }];
         
         __weak typeof(self) weakSelf = self;

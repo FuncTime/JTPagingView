@@ -32,6 +32,22 @@
 
 @implementation JTPagingTopView
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _leftSpacing = 10;
+        _buttonSpacing = 10;
+        _rightSpacing = 10;
+        _bottomLineColor = [UIColor redColor];
+        _selectColor = [UIColor redColor];
+        _noSelectColor = [UIColor blackColor];
+        self.buttons = [[NSMutableArray alloc] init];
+        [self createViews];
+    }
+    return self;
+}
+
 - (instancetype)initWithTitles:(NSMutableArray *)titles {
     self = [super init];
     if (self) {
@@ -117,7 +133,7 @@
 
 - (void)selectTheSpecifiedCellWithNumber:(NSInteger)number {
     
-    if (number > self.buttons.count - 1) {
+    if (number > self.buttons.count - 1 || self.buttons.count == 0) {
         return;
     }
     
@@ -149,7 +165,7 @@
 //    }
     
     NSInteger page = scrollView.contentOffset.x / SCREEN_WIDTH;
-    if (self.buttons.count - 1 < page) {
+    if (self.buttons.count - 1 < page || self.buttons.count == 0) {
         return;
     }
     CGFloat offsetX = self.buttons[page].centerX - SCREEN_WIDTH/2;

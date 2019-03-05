@@ -33,8 +33,8 @@
     NSMutableArray *titles = (NSMutableArray *)@[@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈",@"哈哈哈哈"];
 //    self.paging.bottomLineWidth = 80;
     NSMutableArray *views = [NSMutableArray array];
-    self.paging = [[JTPagingView alloc] init];
-    self.paging.titles = titles;
+    
+    
     
     
     if ([self.title isEqualToString:@"分页"]) {
@@ -56,16 +56,20 @@
         }
         
         
-        self.paging.views = views;
+//        self.paging.views = views;
+//        self.paging.titles = titles;
+        self.paging = [JTPagingView pagingWithTitles:titles views:views];
 //        self.paging.pages = 8;
 //        [self.paging selectPageWithNumber:3];
 //        self.paging.animationType = paingAnimationAlpha;
         
     }else if ([self.title isEqualToString:@"分页(添加一个)"]) {
-        
+        self.paging = [[JTPagingView alloc] init];
+        self.paging.titles = titles;
         self.paging.pages = 7;
     }else if ([self.title isEqualToString:@"分页(添加多个,3个为例)"]) {
-        
+        self.paging = [[JTPagingView alloc] init];
+        self.paging.titles = titles;
         self.paging.pages = 10;
     }
     

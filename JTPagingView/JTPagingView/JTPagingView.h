@@ -16,6 +16,8 @@ typedef enum : NSUInteger {
     paingAnimationNone,
 } PaingAnimationType;
 
+#define PagingTopHeight 45
+
 @interface JTPagingView : UIView
 
 //返回当前即将显示页数
@@ -53,6 +55,9 @@ typedef enum : NSUInteger {
 
 //页数--可以先不创建view,使用页数来创建scrollView的可滚动页数
 @property (nonatomic, assign) NSInteger pages;
+
+//类方法创建
++ (instancetype)pagingWithTitles:(NSMutableArray *)titles views:(NSMutableArray *)views;
 
 //一次添加一个view
 - (void)addViewForBottomView:(UIView *)view;
