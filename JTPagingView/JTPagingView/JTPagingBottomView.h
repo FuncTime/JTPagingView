@@ -33,6 +33,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) void(^scrollViewWillBeginDraggingBlock)(UIScrollView *scrollView);
 //动画类型
 @property (nonatomic, assign) BottomAnimationType animationType;
+//全部加载
+@property (nonatomic, assign) BOOL loadAllView;
 
 //一次添加一个view
 - (void)addViewForBottomView:(UIView *)view;

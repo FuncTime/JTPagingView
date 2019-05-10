@@ -183,6 +183,30 @@
     for (UIView *view in views) {
         [self addViewForBottomView:view];
     }
+    
+    if (self.loadAllView) {
+        
+        [views enumerateObjectsUsingBlock:^(UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (![self.scrollView.subviews containsObject:self.views[idx]]) {
+                
+                [self.scrollView addSubview:self.views[idx]];
+                [self.views[idx] mas_makeConstraints:^(MASConstraintMaker *make) {
+                    if (self.lastView) {
+                        make.left.equalTo(self.lastView.mas_right);
+                    }else {
+                        make.left.equalTo(self.scrollView);
+                    }
+                    make.top.equalTo(self.scrollView);
+                    make.width.mas_equalTo(self.scrollView.mas_width);
+                    make.height.mas_equalTo(self.scrollView.mas_height);
+                }];
+                self.lastView = self.views[idx];
+                [self animationWithView:self.views[idx]];
+            }
+        }];
+        
+    }
+    
 }
 
 //移除所有view
