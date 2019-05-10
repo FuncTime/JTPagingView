@@ -81,7 +81,7 @@
         if (@available(iOS 11.0,*)) {
             make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
         }else{
-            make.top.equalTo(self.view.mas_top).width.offset(64);
+            make.top.equalTo(self.view.mas_top).offset(64);
         }
         make.left.right.bottom.equalTo(self.view);
     }];
